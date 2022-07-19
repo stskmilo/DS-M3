@@ -152,7 +152,7 @@ FROM proveedor WHERE Ciudad != '' OR Provincia != '';
 
 -- 14.- Es necesario discretizar el campo edad en la tabla cliente.
 SELECT DISTINCT edad FROM cliente order by edad asc;
--- Las edades van de 15 a 65, hay 51 edades posibles
+-- Las edades van de 15 a 65, hay 51 edades posibles, sin embargo, se elige un rango personalizado
 -- Rangos: 0: [-17]; 1: [18-35]; 2: [36-53]; 3: [54-71]; 4: [71+]
 ALTER TABLE cliente ADD COLUMN edad_disc INTEGER;
 UPDATE cliente
