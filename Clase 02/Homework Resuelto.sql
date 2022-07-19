@@ -163,3 +163,12 @@ SET edad_disc = CASE
     WHEN edad >=54 and edad <=71 THEN 3
     WHEN edad >71 THEN 4
     END;
+    
+CREATE TABLE grupo_edad(
+IDEdad INTEGER,
+EdadMin INTEGER,
+EdadMax INTEGER
+);
+INSERT INTO grupo_edad(IDEdad, EdadMin, EdadMax)
+VALUES (0,0,17),(1,18,35),(2,36,53),(3,54,71),(4,72,200);
+
